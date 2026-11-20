@@ -1,0 +1,14 @@
+.tmp/
+node_modules/
+build/
+build-*/
+.docusaurus/
+test-results/
+playwright-report/
+reports/
+docs/*.docx
+docs/rendered/
+.env
+.env.*
+*.log
+.DS_Store
