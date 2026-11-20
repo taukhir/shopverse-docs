@@ -6,7 +6,7 @@ export default defineConfig({
   fullyParallel: true,
   retries: process.env.CI ? 2 : 0,
   reporter: process.env.CI ? 'github' : 'list',
-  use: {baseURL: 'http://127.0.0.1:3000/shopverse/', trace: 'retain-on-failure'},
+  use: {baseURL: 'http://127.0.0.1:3000/shopverse-docs/', trace: 'retain-on-failure'},
   projects: [
     {name: 'desktop-chromium', use: {...devices['Desktop Chrome']}},
     {name: 'tablet-chromium', testMatch: /responsive-matrix\.spec\.ts/, use: {...devices['iPad Pro 11']}},
@@ -22,5 +22,5 @@ export default defineConfig({
       use: {...devices['Desktop Safari']},
     },
   ],
-  webServer: {command: 'npm run serve -- --host 127.0.0.1 --port 3000', url: 'http://127.0.0.1:3000/shopverse/', reuseExistingServer: !process.env.CI, timeout: 120_000},
+  webServer: {command: 'npm run serve -- --host 127.0.0.1 --port 3000', url: 'http://127.0.0.1:3000/shopverse-docs/', reuseExistingServer: !process.env.CI, timeout: 120_000},
 });

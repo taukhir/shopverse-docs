@@ -4,7 +4,7 @@ test('root page links to the dedicated root-level documentation index', async ({
   await page.goto('./');
   await expect(page.getByRole('link', {name: 'Open documentation index'})).toHaveAttribute(
     'href',
-    '/shopverse/documentation-index',
+    '/shopverse-docs/documentation-index',
   );
 });
 
